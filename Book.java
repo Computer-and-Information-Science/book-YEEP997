@@ -1,19 +1,64 @@
 public class Book {
-  // put data members here
+    // Private data members
+    private String title;
+    private String author;
+    private int numberOfPages;
 
-  // put the constructor here
-  
-  // put getters here
+    // Constructor
+    public Book(String title, String author, int numberOfPages) {
+        this.title = title;
+        this.author = author;
+        this.numberOfPages = numberOfPages;
+    }
 
-  // put setters here
+    // Getters
+    public String getTitle() {
+        return this.title;
+    }
 
-  //other member functions (methods here)
-  
-  public static void main(String[] args) {
-    
-    //create a student here
+    public String getAuthor() {
+        return this.author;
+    }
 
-    //call the displayStudent method here
-        
+    public int getNumberOfPages() {
+        return this.numberOfPages;
+    }
+
+    // Setters
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setNumberOfPages(int numberOfPages) {
+        this.numberOfPages = numberOfPages;
+    }
+
+    // Display method
+    public void displayBook() {
+        System.out.println("The book " + this.title + " was written by " + this.author +
+                           " and it has " + this.numberOfPages + " pages.");
+    }
+
+    // Main method for testing
+    public static void main(String[] args) {
+        // Creating three Book objects
+        Book book1 = new Book("Harry Potter", "J.K. Rowling", 309);
+        Book book2 = new Book("The Hobbit", "J.R.R. Tolkien", 310);
+        Book book3 = new Book("1984", "George Orwell", 328);
+
+        // Displaying books
+        book1.displayBook();
+        book2.displayBook();
+        book3.displayBook();
+
+        // Updating number of pages for book1
+        book1.setNumberOfPages(350);
+
+        // Displaying book1 again
+        book1.displayBook();
     }
 }
